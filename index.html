@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Demo Page</title>
+	<style>
+		* { box-sizing: border-box; }
+		body {
+			margin: 0;
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+			font-family: Arial, sans-serif;
+			color: #fff;
+			background: linear-gradient(135deg, #4f46e5, #9333ea);
+		}
+		.card {
+			width: min(90%, 420px);
+			padding: 2rem;
+			text-align: center;
+			border-radius: 20px;
+			background: rgba(255, 255, 255, 0.14);
+			box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+			backdrop-filter: blur(10px);
+		}
+		button {
+			border: 0;
+			padding: 0.8rem 1.2rem;
+			border-radius: 999px;
+			color: #4f46e5;
+			background: #fff;
+			cursor: pointer;
+			font-weight: bold;
+		}
+		button:hover { transform: translateY(-2px); }
+	</style>
+</head>
+<body>
+	<main class="card">
+		<h1>Hello, world!</h1>
+		<p id="message">This is a simple HTML demo.</p>
+		<button id="actionButton">Click me</button>
+	</main>
+
+	<script>
+		document.getElementById('actionButton').addEventListener('click', () => {
+			document.getElementById('message').textContent = 'Button clicked successfully!';
+		});
+	</script>
+</body>
+</html>
